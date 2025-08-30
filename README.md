@@ -1,7 +1,6 @@
 # python-ws-kafka
-Simple implementation of message flow from websocket to kafka consumer
 
-- Prior to run tests it is required to:
+- Prior to run kafka producer/consumer tests it is required to:
 
 - start zookeeper:
 >./zookeeper-server-start.sh ../config/zookeeper.properties
