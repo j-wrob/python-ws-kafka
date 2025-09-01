@@ -25,6 +25,12 @@ class WebSocketClient:
         """
         self.websocket = await websockets.connect(self.websocket_url, ssl=self.ssl_context)
 
+    async def is_connected(self):
+        """
+        Checks if the WebSocket connection is open.
+        """
+        return self.websocket is not None and self.websocket.state.name == "OPEN"
+
     async def send_message(self, message):
         """
         Sends a WebSocket message using the persistent connection.
